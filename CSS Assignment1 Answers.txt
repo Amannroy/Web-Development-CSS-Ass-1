@@ -1,0 +1,174 @@
+<!-- Q.1 What’s Box Model in CSS ?  -->
+
+<!-- Ans- The box model in CSS is a fundamental concept that describes how elements are rendered and displayed on a web page. It defines the structure and layout of elements by representing them as rectangular boxes.
+
+The box model consists of four main components:
+
+Content: It represents the actual content of an element, such as text, images, or other media.
+
+Padding: It is a transparent area surrounding the content and provides space between the content and the border. Padding can be set using the CSS padding property.
+
+Border: It is a line that surrounds the padding and content of an element. Borders can be styled and customized using CSS properties like border-width, border-color, and border-style.
+
+Margin: It is a transparent area outside the border and provides space between the element and neighboring elements. Margins can be set using the CSS margin property.
+
+These components together determine the total space occupied by an element on the web page. The width and height of an element, as specified in CSS, do not include the padding, border, and margin. Instead, they represent the dimensions of the content box. -->
+
+<!-- Q.2 What are the Different Types of Selectors in CSS & what are the advantages of them? -->
+
+<!-- Ans- In CSS, selectors are used to target and select specific elements on a web page to apply styles and formatting. There are several types of selectors available in CSS, each with its own advantages and use cases. Here are some of the main types of selectors:
+
+Element Selectors: These are the most basic type of selectors and target elements based on their HTML tag names. For example, to select all <h1> headings, you would use the selector h1. Element selectors are simple and provide a broad way to target multiple elements with the same tag, but they lack specificity.
+
+Class Selectors: Class selectors target elements based on the value of their class attribute. They are denoted by a dot (.) followed by the class name. For example, .my-class targets all elements with the class name "my-class". Class selectors are versatile and allow you to apply styles to multiple elements with the same class, making them useful for styling groups of elements.
+
+ID Selectors: ID selectors target elements based on the value of their id attribute. They are denoted by a hash (#) followed by the ID name. For example, #my-id targets the element with the ID "my-id". ID selectors are highly specific and should be unique within the HTML document. They are useful for targeting individual elements with specific styles or behavior.
+
+Attribute Selectors: Attribute selectors target elements based on the presence or value of specific attributes. They allow you to select elements based on attribute names, values, or other conditions. For example, [type="text"] selects all elements with the attribute type set to "text". Attribute selectors provide a flexible way to target elements with specific attribute conditions.
+
+Pseudo-Selectors: Pseudo-selectors target elements based on special conditions or states that are not represented by attributes alone. They are denoted by a colon (:) followed by the pseudo-selector name. Examples include :hover to target elements when they are being hovered over, :first-child to target the first child of a parent element, and :nth-child() to target elements based on their position within a parent. Pseudo-selectors enhance the interactivity and dynamic behavior of web pages.
+
+Pseudo-classes: Pseudo-classes target elements based on specific states or conditions. They are denoted by a colon (:) followed by the pseudo-class name. Some common examples include:
+:hover: Targets an element when it is being hovered over by the cursor.
+:active: Targets an element when it is being actively interacted with, such as when a mouse button is pressed.
+:focus: Targets an element when it has received focus, such as through keyboard navigation.
+:first-child: Targets the first child element of its parent.
+:nth-child(): Targets elements based on their position within a parent. For example, :nth-child(2) selects the second child element.
+
+Pseudo-elements: Pseudo-elements target specific parts of an element's content and allow you to style them separately. They are denoted by a double colon (::) followed by the pseudo-element name. Some common examples include:
+::before: Inserts content before the selected element.
+::after: Inserts content after the selected element.
+::first-line: Targets the first line of text within an element.
+::selection: Targets the portion of text that has been selected by the user.
+Advantages of different selectors:
+
+Selectors provide a way to target specific elements or groups of elements, allowing you to apply styles selectively and create different visual treatments.
+Class selectors enable the creation of reusable styles, as multiple elements can share the same class, reducing code repetition.
+ID selectors provide a highly specific way to target individual elements, making them useful for unique styling or JavaScript interactions.
+Attribute selectors allow for dynamic selection based on attribute conditions, providing flexibility in targeting elements.
+Pseudo-selectors enhance the interactivity and user experience of web pages, allowing for targeted styling of specific states or conditions.
+By using a combination of selectors and their specificity, you can fine-tune the styling and layout of your web page, achieving the desired visual design. -->
+
+<!-- Q.3 What is VW/VH ? -->
+
+<!-- Ans- VW and VH are units of measurement in CSS that are used to specify sizes relative to the viewport, which is the visible area of a web page.
+
+VW (Viewport Width): The VW unit represents a percentage of the width of the viewport. One unit of VW is equal to 1% of the viewport width. For example, if the viewport width is 1000 pixels, 1 VW would be equivalent to 10 pixels.
+
+VH (Viewport Height): The VH unit represents a percentage of the height of the viewport. One unit of VH is equal to 1% of the viewport height. For example, if the viewport height is 800 pixels, 1 VH would be equivalent to 8 pixels. -->
+
+<!-- Q.4 Whats difference between Inline, Inline Block and block ? -->
+
+<!-- Ans- In CSS, there are three display property values that determine how elements are rendered and flow within the document: inline, inline-block, and block. Here are the differences between them:
+
+Inline Elements:
+
+Inline elements do not start on a new line and are rendered within the text flow of a document.
+They only occupy the space necessary to display their content, without causing line breaks or creating block-like structures.
+Examples of inline elements include <span>, <a>, <strong>, and <em>.
+Inline elements do not have width and height properties, and margins and paddings only affect the horizontal space around the content.
+Multiple inline elements can appear next to each other horizontally.
+Inline-Block Elements:
+
+Inline-block elements are similar to inline elements in that they flow within the text, but they also have block-level properties.
+They occupy space within the text flow and respect the width and height properties set for them.
+Inline-block elements allow for vertical alignment and can have margins and paddings applied to them, affecting both horizontal and vertical space.
+Examples of inline-block elements include <img>, <input>, and <button>.
+Multiple inline-block elements can appear next to each other horizontally.
+Block Elements:
+
+Block elements start on a new line and create a block-like structure, taking up the full available width of their parent container by default.
+They do not allow other elements to appear next to them horizontally, causing line breaks before and after.
+Block elements have width and height properties that can be set explicitly.
+They can have margins, paddings, and borders applied to them, affecting both horizontal and vertical space.
+Examples of block elements include <div>, <p>, <h1> to <h6>, and <section>. -->
+
+    <!-- Q.5 How is Border-box different from Content Box? -->
+
+    <!-- Ans- The terms "border-box" and "content box" refer to two different box-sizing models in CSS that determine how the size of an element is calculated, including its content, padding, border, and optionally, margin. Here's how they differ:
+
+    Content Box (default box-sizing):
+    
+    The content box model calculates the size of an element excluding padding, border, and margin. In this model, the specified width and height of an element determine the dimensions of the content box only.
+    If you set the width of an element to 200 pixels, for example, the actual width of the content box will be 200 pixels, and any padding, border, or margin added to the element will increase its total size beyond the specified width.
+    Border-box:
+    
+    The border-box model calculates the size of an element including its content, padding, and border. In this model, the specified width and height of an element determine the dimensions of the entire box, from the outer edge of the border to the outer edge of the opposite border.
+    If you set the width of an element to 200 pixels with box-sizing: border-box, the total size of the element will be 200 pixels, including the content, padding, and border. Any additional margin will increase the space occupied by the element within its parent container. -->
+
+
+    <!-- Q.6 What’s z-index and How does it Function ? -->
+
+    <!-- Ans- In CSS, the z-index property is used to control the stacking order of elements along the z-axis, which determines how they are layered or overlapped in a web page's three-dimensional space. The z-index property is applied to positioned elements (those with a position value other than static).
+
+    Here's how z-index functions:
+    
+    Stacking Context: Each positioned element, along with its descendants, forms a stacking context. The stacking context determines the order in which elements are rendered and displayed.
+    
+    Default Stacking Order: Positioned elements initially have a z-index value of auto, and the stacking order follows the order in which they appear in the HTML markup. Elements with a higher stacking order appear in front of elements with a lower stacking order.
+    
+    Stacking Levels: The z-index property assigns a specific stacking level to an element within its stacking context. A higher z-index value places an element closer to the top of the stacking order, making it appear in front of elements with lower z-index values.
+    
+    Numeric Values: The z-index property accepts positive and negative integer values. Positive values place elements in front, while negative values place elements behind. The actual value magnitude is not significant; it's the relative difference between elements that matters.
+    
+    Siblings and Parent Elements: The z-index property is primarily used to control the stacking order of sibling elements within the same stacking context. It does not affect the stacking order of parent or child elements in their respective stacking contexts unless they are also positioned elements.
+    
+    Stacking Context Hierarchy: Elements with a higher z-index value in a parent stacking context will generally appear in front of elements with a lower z-index value in a child stacking context. However, there are cases where the stacking context hierarchy and CSS properties like opacity and transform can affect the stacking order. -->
+
+    <!-- Q.7 What’s Grid & Flex and difference between them? -->
+
+    <!-- Ans- 
+    Grid and Flexbox are both CSS layout systems that allow for flexible and responsive designs, but they have different approaches and use cases. Here's a comparison between Grid and Flexbox:
+    
+    Flexbox:
+    
+    Flexbox, short for "Flexible Box Layout," is designed for one-dimensional layout, either in a row or column.
+    It is ideal for arranging elements within a single row or column, creating dynamic and flexible layouts.
+    Flexbox provides alignment, ordering, and spacing capabilities to arrange elements along the main axis and cross axis.
+    It allows for the distribution of available space among flex items, making it useful for building responsive designs.
+    Flexbox is commonly used for navigation menus, content containers, and vertically or horizontally centered layouts.
+    Grid:
+    
+    CSS Grid Layout, also known as Grid, is a two-dimensional layout system designed for both rows and columns.
+    It enables complex layouts by dividing the available space into a grid of rows and columns.
+    Grid provides precise control over the placement and alignment of elements within the grid cells.
+    It supports powerful features like grid tracks, explicit sizing, grid gaps, and overlapping elements.
+    Grid is well-suited for creating grid-based designs, such as complex page layouts with multiple sections or grids of images.
+    It allows for responsive designs with auto-placement, responsive grid tracks, and media query-based adjustments.
+    Main Differences:
+    
+    Flexbox is one-dimensional, focusing on laying out elements in a row or column, while Grid is two-dimensional, allowing for both rows and columns.
+    Flexbox is great for arranging elements within a single line, while Grid is ideal for complex layouts with multiple rows and columns.
+    Flexbox is useful for aligning and distributing items along the main axis and cross axis, while Grid offers precise control over the placement and sizing of items within grid cells.
+    Flexbox is commonly used for small-scale layouts or within specific components, while Grid is well-suited for larger-scale page layouts and overall page structure.
+    In many cases, Grid and Flexbox can be used together to create flexible and responsive designs. Flexbox can be used for the arrangement of items within individual Grid cells or to control the layout of Grid tracks themselves.
+    
+    Both Grid and Flexbox provide powerful layout capabilities, and the choice between them depends on the specific requirements of your design and the desired layout structure. -->
+
+    <!-- Q.8 Difference between absolute and relative and sticky and fixed position explain with example. -->
+<!-- 
+    Ans- The CSS position property allows you to control the positioning of elements on a web page. The four commonly used position values are absolute, relative, sticky, and fixed. Here's an explanation of their differences and example usage:
+
+    Absolute Position:
+    
+    When an element has position: absolute;, it is positioned relative to its closest positioned ancestor or the initial containing block if no positioned ancestor is found.
+    Absolute positioning takes the element out of the normal document flow, meaning it doesn't affect the positioning of other elements.
+    The position of an absolutely positioned element can be adjusted using the top, right, bottom, and left properties.
+
+    Relative Position:
+
+With position: relative;, an element is positioned relative to its normal position within the document flow.
+It retains its space in the normal flow, and other elements are positioned as if the element still occupies its original position.
+The position of a relatively positioned element can be adjusted using the top, right, bottom, and left properties, which move the element relative to its normal position.
+
+Sticky Position:
+
+With position: sticky;, an element behaves as relative until it reaches a specific scroll position, then it becomes fixed to the viewport.
+Sticky elements are positioned based on the user's scroll position, but they remain in the document flow until the specified threshold is met.
+Sticky positioning is commonly used for creating sticky headers, sidebars, or navigation menus that stick to a specific position when scrolling.
+
+Fixed Position:
+
+Elements with position: fixed; are positioned relative to the viewport and do not move when the page is scrolled.
+Fixed elements are taken out of the normal document flow and are always visible, regardless of scrolling.
+They are commonly used for creating elements that should remain in a fixed position, such as navigation bars or advertisements. -->
